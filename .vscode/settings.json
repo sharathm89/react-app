@@ -1,0 +1,10 @@
+{
+  "editor.tabSize": 2,
+  "editor.wordWrapColumn": 80,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
