@@ -1,11 +1,14 @@
 {
   "editor.tabSize": 2,
-  "editor.wordWrapColumn": 80,
+  "editor.wordWrapColumn": 120,
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+  "files.associations": {
+    "*.css": "scss"
+  },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
-    // "source.fixAll.stylelint": true
+    "source.fixAll.stylelint": true
   }
 }
