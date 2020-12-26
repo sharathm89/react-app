@@ -5,7 +5,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 
 const isDev = process.env.NODE_ENV ? true : false;
-// const isDev = false;
 console.log(`Environment: ${isDev ? "development" : "production"}`);
 
 module.exports = {
