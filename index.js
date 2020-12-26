@@ -1,16 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-import Home from "./src/js/home";
-
-import "./src/assets/stylesheets/app.scss";
-
-const App = () => {
-  return (
-    <div styleName="container">
-      <Home />
-    </div>
-  );
-};
+import App from "./src/app";
 
 ReactDom.render(<App />, document.getElementById("root"));

@@ -31,7 +31,6 @@ module.exports = {
       Actions: path.resolve(__dirname, "src/actions/"),
       // Components: path.resolve(__dirname, "src/components/"),
       Assets: path.resolve(__dirname, "src/assets/"),
-      // Routes: path.resolve(__dirname, "src/routes/"),
       Helpers: path.resolve(__dirname, "src/helpers/"),
       Api: path.resolve(__dirname, "src/api/"),
     },
