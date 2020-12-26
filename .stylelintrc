@@ -13,6 +13,13 @@
         "ignore": ["stylelint-commands", "after-comment"]
       }
     ],
-    "max-empty-lines": 1
+    "max-empty-lines": 1,
+     "indentation": [
+      2,
+      {
+        "except": ["value"],
+        "severity": "warning"
+      }
+    ]
   }
 }

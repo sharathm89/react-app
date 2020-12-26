@@ -5,6 +5,6 @@
   "files.insertFinalNewline": true,
   "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
   }
 }
