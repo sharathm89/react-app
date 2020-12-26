@@ -27,11 +27,10 @@ module.exports = {
   },
   resolve: {
     alias: {
-      // Actions: path.resolve(__dirname, "src/actions/"),
+      Actions: path.resolve(__dirname, "src/actions/"),
       // Components: path.resolve(__dirname, "src/components/"),
       Assets: path.resolve(__dirname, "src/assets/"),
       // Routes: path.resolve(__dirname, "src/routes/"),
-      // Constants: path.resolve(__dirname, "src/constants/"),
       Helpers: path.resolve(__dirname, "src/helpers/"),
       Api: path.resolve(__dirname, "src/api/"),
     },
