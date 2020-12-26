@@ -7,13 +7,26 @@
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
     "block-no-empty": true,
+    "no-extra-semicolons": true,
     "max-empty-lines": 1,
-     "indentation": [
+    "indentation": [
       2,
       {
         "except": ["value"],
         "severity": "error"
       }
-    ]
+    ],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "blockless-after-same-name-blockless",
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment"
+        ]
+      }
+    ],
   }
 }
