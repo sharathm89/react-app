@@ -12,8 +12,10 @@
     "eslint-fix": "eslint --fix \"src/**/*.js\""
   },
   "dependencies": {
+    "date-fns": "^2.16.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "superagent": "^6.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

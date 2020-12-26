@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 
-const isDev = process.env.NODE_ENV ? true : false;
+const isDev = !!process.env.NODE_ENV;
 
 console.log(`Environment: ${isDev ? "development" : "production"}`);
 
@@ -12,9 +12,9 @@ module.exports = {
   entry: "./src/index.js",
   mode: isDev ? "development" : "production",
   output: {
-    path: __dirname + "/dist",
+    path: path.join(__dirname, "dist"),
     publicPath: "/",
-    filename: "bundle.js"
+    filename: "bundle.js",
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
@@ -23,21 +23,22 @@ module.exports = {
     compress: true,
     port: process.env.CLIENT_PORT,
     hot: true,
-    quiet: false
+    quiet: false,
   },
-	resolve: {
-		alias: {
-			// Actions: path.resolve(__dirname, "src/actions/"),
-			// Components: path.resolve(__dirname, "src/components/"),
-			Assets: path.resolve(__dirname, "src/assets/"),
-			// Routes: path.resolve(__dirname, "src/routes/"),
-			// Constants: path.resolve(__dirname, "src/constants/"),
-			// Helpers: path.resolve(__dirname, "src/helpers/"),
-      // Api: path.resolve(__dirname, "src/api/"),
-		}
-	},
+  resolve: {
+    alias: {
+      // Actions: path.resolve(__dirname, "src/actions/"),
+      // Components: path.resolve(__dirname, "src/components/"),
+      Assets: path.resolve(__dirname, "src/assets/"),
+      // Routes: path.resolve(__dirname, "src/routes/"),
+      // Constants: path.resolve(__dirname, "src/constants/"),
+      Helpers: path.resolve(__dirname, "src/helpers/"),
+      Api: path.resolve(__dirname, "src/api/"),
+    },
+  },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ["babel-loader"],
@@ -52,8 +53,8 @@ module.exports = {
               modules: {
                 localIdentName: "[path]___[name]__[local]___[hash:base64:5]",
               },
-              sourceMap: isDev
-            }
+              sourceMap: isDev,
+            },
           },
           "sass-loader",
           {
@@ -62,38 +63,38 @@ module.exports = {
               lessOptions: {
                 strictMath: isDev,
               },
-              sourceMap: isDev
+              sourceMap: isDev,
             },
           },
         ],
       },
       {
-				test: /\.(png|jpg|jpeg|gif)$/,
-				use: [
-					{
-						loader: "url-loader"
-					}
-				]
-			},
-			{
+        test: /\.(png|jpg|jpeg|gif)$/,
+        use: [
+          {
+            loader: "url-loader",
+          },
+        ],
+      },
+      {
         test: /\.(woff|woff2|eot|ttf|svg)$/,
         use: [
-					{
-						loader: "url-loader"
-					}
-				]
-			}
-    ]
+          {
+            loader: "url-loader",
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       filename: "./index.html",
-      favicon: "./public/favicon.ico"
+      favicon: "./public/favicon.ico",
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
-      chunkFilename: "[id].css"
+      chunkFilename: "[id].css",
     }),
     new webpack.DefinePlugin({
       "process.env": {
@@ -102,5 +103,5 @@ module.exports = {
       },
     }),
   ],
-  devtool: isDev ? "source-map" : false
+  devtool: isDev ? "source-map" : false,
 };
