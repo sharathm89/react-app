@@ -5,5 +5,19 @@
 
 .title {
   font-size: 24px;
-  color: red;
+  color: green;
+}
+
+.country-list {
+  list-style-type: none;
+
+  /* Sample li target testing */
+  > li {
+    margin-bottom: 10px;
+  }
+
+  .item {
+    font-size: 18px;
+    font-weight: bolder;
+  }
 }

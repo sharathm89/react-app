@@ -22,20 +22,29 @@ module.exports = {
     rules: [{
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader']
+        use: ['babel-loader']
       },
       {
         test: /\.css$/,
         use: [
           'style-loader',
           MiniCssExtractPlugin.loader,
-          // "less-loader",
           {
             loader: 'css-loader',
             options: {
-              modules: true,
+              modules: {
+                localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
+              },
             }
-          }
+          },
+          {
+            loader: "less-loader",
+            options: {
+              lessOptions: {
+                strictMath: true,
+              },
+            },
+          },
         ],
       },
       {
@@ -53,7 +62,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
-    })
+    }),
   ],
   devtool: 'inline-source-map',
 };
