@@ -20,8 +20,6 @@
     "node": true,
     "es6": true
   },
-  "parserOptions": {
-  },
   "settings": {
     "react": {
       "version": "detect"
