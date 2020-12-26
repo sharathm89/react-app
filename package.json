@@ -66,7 +66,7 @@
     ],
     "*.{css,scss,sass,less}": [
       "npx prettier --write",
-      "npx stylelint --fix",
+      "npx stylelint",
       "git add"
     ]
   }
