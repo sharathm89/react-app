@@ -1,7 +1,20 @@
 {
+  "extends": [
+    "standard",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "plugins": [
+    "react",
+    "standard"
+  ],
   "parser": "babel-eslint",
-  "extends": "react",
-  // "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "rules": {
+    "max-len": ["warn", { "code": 120 }],
+    "react/jsx-no-target-blank": ["off", {"enforceDynamicLinks": "never"}]
+  },
   "env": {
     "browser": true,
     "node": true,
