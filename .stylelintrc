@@ -16,17 +16,7 @@
         "severity": "error"
       }
     ],
-    "at-rule-empty-line-before": [
-      "always",
-      {
-        "except": [
-          "blockless-after-same-name-blockless",
-          "first-nested"
-        ],
-        "ignore": [
-          "after-comment"
-        ]
-      }
-    ],
+    "no-eol-whitespace": true,
+    "no-missing-end-of-source-newline": true,
   }
 }
