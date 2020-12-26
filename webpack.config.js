@@ -40,14 +40,14 @@ module.exports = {
             }
           },
           "sass-loader",
-          // {
-          //   loader: "less-loader",
-          //   options: {
-          //     lessOptions: {
-          //       strictMath: true,
-          //     },
-          //   },
-          // },
+          {
+            loader: "less-loader",
+            options: {
+              lessOptions: {
+                strictMath: true,
+              },
+            },
+          },
         ],
       },
       {
