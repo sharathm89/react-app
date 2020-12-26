@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 
-// const isDev = process.env.NODE_ENV ? true : false;
-const isDev = false;
+const isDev = process.env.NODE_ENV ? true : false;
+// const isDev = false;
 
 module.exports = {
   entry: "./src/index.js",
@@ -70,10 +70,7 @@ module.exports = {
 				test: /\.(png|jpg|jpeg|gif)$/,
 				use: [
 					{
-						loader: "url-loader",
-						options: {
-							limit: 10000,
-						}
+						loader: "url-loader"
 					}
 				]
 			},
@@ -81,10 +78,7 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|svg)$/,
         use: [
 					{
-						loader: "url-loader",
-						options: {
-							limit: 100000,
-						}
+						loader: "url-loader"
 					}
 				]
 			}
