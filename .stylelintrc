@@ -18,6 +18,6 @@
     ],
     "no-eol-whitespace": true,
     "no-missing-end-of-source-newline": true,
-    "color-hex-case": "lower",
+    "color-hex-case": "lower"
   }
 }
