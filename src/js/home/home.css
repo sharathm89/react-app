@@ -11,7 +11,6 @@
 .country-list {
   list-style-type: none;
 
-  /* Sample li target testing */
   > li {
     margin-bottom: 10px;
   }
@@ -20,4 +19,7 @@
     font-size: 18px;
     font-weight: bolder;
   }
+}
+:global .test {
+  color: red;
 }
