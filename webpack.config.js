@@ -9,7 +9,7 @@ const isDev = !!process.env.NODE_ENV;
 console.log(`Environment: ${isDev ? "development" : "production"}`);
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./index.js",
   mode: isDev ? "development" : "production",
   output: {
     path: path.join(__dirname, "dist"),
@@ -17,13 +17,14 @@ module.exports = {
     filename: "bundle.js",
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    compress: true,
     open: true,
     host: "localhost",
-    compress: true,
     port: process.env.CLIENT_PORT,
     hot: true,
+    historyApiFallback: true,
     quiet: false,
+    stats: "errors-warnings",
   },
   resolve: {
     alias: {

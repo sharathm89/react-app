@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-import Home from "./js/home";
+import Home from "./src/js/home";
 
-import "../src/assets/stylesheets/app.scss";
+import "./src/assets/stylesheets/app.scss";
 
 const App = () => {
   return (
