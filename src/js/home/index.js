@@ -7,11 +7,11 @@ const Home = () => {
 
   useEffect(() => {
     setList([
-      {name: "India"},
-      {name: "Sri Lanka"},
-      {name: "United States of America"},
-      {name: "Denmark"},
-      {name: "Australia"},
+      { name: "India" },
+      { name: "Sri Lanka" },
+      { name: "United States of America" },
+      { name: "Denmark" },
+      { name: "Australia" },
     ]);
   }, []);
 
@@ -20,23 +20,19 @@ const Home = () => {
       <div styleName="title">Hello from Home CSS</div>
 
       <ul styleName="country-list">
-        {
-          list.map((item, index) => (
-            <li styleName="item" key={index}>
-              {item.name}
-            </li>
-          ))
-        }
+        {list.map((item, index) => (
+          <li styleName="item" key={index}>
+            {item.name}
+          </li>
+        ))}
       </ul>
 
       <ul>
-        {
-          list.map((item, index) => (
-            <li styleName="item" key={index}>
-              {item.name}
-            </li>
-          ))
-        }
+        {list.map((item, index) => (
+          <li styleName="item" key={index}>
+            {item.name}
+          </li>
+        ))}
       </ul>
     </div>
   );
