@@ -6,6 +6,7 @@ const webpack = require("webpack");
 
 const isDev = process.env.NODE_ENV ? true : false;
 // const isDev = false;
+console.log(`Environment: ${isDev ? "development" : "production"}`);
 
 module.exports = {
   entry: "./src/index.js",
@@ -101,5 +102,5 @@ module.exports = {
       },
     }),
   ],
-  devtool: isDev ? "source-map" : "eval-cheap-source-map",
+  devtool: isDev ? "source-map" : false
 };
