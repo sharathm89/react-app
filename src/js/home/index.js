@@ -19,8 +19,6 @@ const Home = () => {
     <div styleName="container">
       <div styleName="title">Hello from Home CSS</div>
 
-      <p>testing scss</p>
-
       <ul styleName="country-list">
         {list.map((item, index) => (
           <li styleName="item" key={index}>
