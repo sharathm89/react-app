@@ -3,7 +3,7 @@ import ReactDom from "react-dom";
 
 import Home from "./js/home";
 
-import "./stylesheets/app.scss";
+import "../src/assets/stylesheets/app.scss";
 
 const App = () => {
   return (
