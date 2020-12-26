@@ -8,7 +8,12 @@
       "@dr.pogodin/babel-plugin-react-css-modules",
       {
         "webpackHotModuleReloading": true,
-        "autoResolveMultipleImports": true
+        "autoResolveMultipleImports": true,
+        "filetypes": {
+          ".scss": {
+            "syntax": "postcss-scss"
+          }
+        }
       }
     ]
   ]

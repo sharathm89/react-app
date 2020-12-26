@@ -3,4 +3,14 @@ import ReactDom from "react-dom";
 
 import Home from "./js/home";
 
-ReactDom.render(<Home />, document.getElementById("root"));
+import "./stylesheets/app.scss";
+
+const App = () => {
+  return (
+    <div styleName="container">
+      <Home />
+    </div>
+  );
+};
+
+ReactDom.render(<App />, document.getElementById("root"));

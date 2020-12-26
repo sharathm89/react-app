@@ -1,0 +1,15 @@
+.container {
+  max-width: 784px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  margin: 0 auto;
+  padding: 0 var(--space2);
+  background-color: gold;
+}
+
+/* Tablet and Above */
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-width);
+  }
+}

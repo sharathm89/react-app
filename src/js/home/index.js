@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import "./style.css";
+import "./home.css";
 
 const Home = () => {
   const [list, setList] = useState([]);
@@ -18,6 +18,8 @@ const Home = () => {
   return (
     <div styleName="container">
       <div styleName="title">Hello from Home CSS</div>
+
+      <p>testing scss</p>
 
       <ul styleName="country-list">
         {list.map((item, index) => (
