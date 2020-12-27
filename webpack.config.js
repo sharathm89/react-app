@@ -54,7 +54,9 @@ module.exports = {
               modules: {
                 auto: (resourcePath) =>
                   resourcePath.indexOf("assets/stylesheets") === -1,
-                localIdentName: "[path]___[name]__[local]___[hash:base64:5]",
+                localIdentName: isDev
+                  ? "[path]___[name]__[local]___[hash:base64:5]"
+                  : "[hash:base64:5]",
               },
               sourceMap: isDev,
             },
