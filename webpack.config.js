@@ -44,7 +44,7 @@ module.exports = {
         use: ["babel-loader"],
       },
       {
-        test: /\.(css|sass|scss|less)$/,
+        test: /\.(css|sass|scss)$/,
         exclude: /node_modules/,
         use: [
           isDev ? "style-loader" : MiniCssExtractPlugin.loader,
@@ -60,15 +60,6 @@ module.exports = {
             },
           },
           "sass-loader",
-          {
-            loader: "less-loader",
-            options: {
-              lessOptions: {
-                strictMath: isDev,
-              },
-              sourceMap: isDev,
-            },
-          },
         ],
       },
       {

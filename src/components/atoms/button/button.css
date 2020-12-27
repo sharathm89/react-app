@@ -1,6 +1,7 @@
 .wrapper {
-  background-color: var(--primary);
-  color: var(--white);
+  /*background-color: var(--primary);
+  color: var(--white);*/
   border: none;
   padding: 10px;
+  background-color: green;
 }

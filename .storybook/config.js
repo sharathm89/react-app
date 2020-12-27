@@ -1,6 +1,6 @@
 import { configure } from '@storybook/react';
 
-import "../src/assets/stylesheets/app.scss";
+// import "../src/assets/stylesheets/app.scss";
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src/components', true, /.stories.js$/);
