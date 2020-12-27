@@ -1,0 +1,95 @@
+/* stylelint-disable */
+
+/*
+  Load CSS fonts by executing the below command in terminal
+  curl -vH "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0" 'https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400' | curl -X POST -s --data-urlencode 'input@-' https://cssminifier.com/raw
+*/
+
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: local("Nunito"),
+    url(https://fonts.gstatic.com/s/nunito/v16/XRXX3I6Li01BKofIMOaH.woff)
+      format("woff");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nunito"),
+    url(https://fonts.gstatic.com/s/nunito/v16/XRXV3I6Li01BKof4MQ.woff)
+      format("woff");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Nunito"),
+    url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofA6sKkZQ.woff)
+      format("woff");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Nunito"),
+    url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAjsOkZQ.woff)
+      format("woff");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nunito Sans"),
+    url(https://fonts.gstatic.com/s/nunitosans/v6/pe0oMImSLYBIv1o4X1M8cce4I90.woff)
+      format("woff");
+}
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nunito Sans"),
+    url(https://fonts.gstatic.com/s/nunitosans/v6/pe0qMImSLYBIv1o4X1M8cfe5.woff)
+      format("woff");
+}
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Nunito Sans"),
+    url(https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc9iB_5p.woff)
+      format("woff");
+}
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Nunito Sans"),
+    url(https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc8GBv5p.woff)
+      format("woff");
+}
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local("Nunito Sans"),
+    url(https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc8aBf5p.woff)
+      format("woff");
+}
+
+:root {
+  --fallback: "Open Sans", "Helvetica Neue", sans-serif;
+  --font-1: var(--fallback);
+  --font-2: var(--fallback);
+}
