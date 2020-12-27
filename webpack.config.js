@@ -24,7 +24,7 @@ module.exports = {
     hot: true,
     historyApiFallback: true,
     quiet: false,
-    stats: "errors-warnings",
+    // stats: "minimal", // Use if less information is required -> https://webpack.js.org/configuration/dev-server/#devserverstats-
   },
   resolve: {
     alias: {
