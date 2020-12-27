@@ -1,8 +1,17 @@
-https://www.freecodecamp.org/news/how-to-set-up-deploy-your-react-app-from-scratch-using-webpack-and-babel-a669891033d4/
+### Install
 
-https://www.robinwieruch.de/webpack-font
+```sh
+make install
+```
 
-https://stackoverflow.com/questions/50261548/webpack-fails-module-build-failed-unknown-word-with-webpack-config-js-file
+### Run Client
 
+```sh
+make run
+```
 
-localIdentName: isDev ? "[path]___[name]__[local]___[hash:base64:5]" : "[hash:base64:5]",
+### Run Storybook
+
+```sh
+make storybook
+```
