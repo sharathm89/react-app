@@ -6,40 +6,32 @@
 */
 
 @font-face {
-  font-family: "Nunito";
+  font-family: Merriweather;
   font-style: italic;
-  font-display: swap;
   font-weight: 400;
-  src: local("Nunito"),
-    url(https://fonts.gstatic.com/s/nunito/v16/XRXX3I6Li01BKofIMOaH.woff)
-      format("woff");
+  src: url(https://fonts.gstatic.com/s/merriweather/v22/u-4m0qyriQwlOrhSvowK_l5-eSZK.woff)
+    format("woff");
 }
 @font-face {
-  font-family: "Nunito";
+  font-family: Merriweather;
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: local("Nunito"),
-    url(https://fonts.gstatic.com/s/nunito/v16/XRXV3I6Li01BKof4MQ.woff)
-      format("woff");
+  src: url(https://fonts.gstatic.com/s/merriweather/v22/u-440qyriQwlOrhSvowK_l5OeA.woff)
+    format("woff");
 }
 @font-face {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: local("Nunito"),
-    url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofA6sKkZQ.woff)
-      format("woff");
-}
-@font-face {
-  font-family: "Nunito";
+  font-family: Merriweather;
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
-  src: local("Nunito"),
-    url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAjsOkZQ.woff)
-      format("woff");
+  src: url(https://fonts.gstatic.com/s/merriweather/v22/u-4n0qyriQwlOrhSvowK_l52xwNpXA.woff)
+    format("woff");
+}
+@font-face {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: 900;
+  src: url(https://fonts.gstatic.com/s/merriweather/v22/u-4n0qyriQwlOrhSvowK_l52_wFpXA.woff)
+    format("woff");
 }
 
 @font-face {
