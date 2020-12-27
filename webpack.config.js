@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 
-const isDev = !!process.env.NODE_ENV;
+const isDev = process.env.NODE_ENV === "development";
 
 console.log(`Environment: ${isDev ? "development" : "production"}`);
 
@@ -51,7 +51,12 @@ module.exports = {
             loader: "css-loader",
             options: {
               modules: {
+                auto: (resourcePath) =>
+                  resourcePath.indexOf("assets/stylesheets") === -1,
                 localIdentName: "[path]___[name]__[local]___[hash:base64:5]",
+                // getLocalIdent: (context, localIdentName, localName, options) => {
+                //   return "whatever_random_class_name";
+                // },
               },
               sourceMap: isDev,
             },

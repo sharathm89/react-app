@@ -6,8 +6,6 @@ import MainApp from "./container";
 
 import { configureStore } from "./store";
 
-require("./assets/stylesheets/app.scss");
-
 const App = () => (
   <Provider store={configureStore()}>
     <Router>

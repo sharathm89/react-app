@@ -3,8 +3,6 @@ import { bool } from "prop-types";
 import { Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
 
-import "../assets/stylesheets/app.scss";
-
 import { Header, Footer, NotFound } from "Rows";
 import { LoadingIndicator } from "Atoms";
 
