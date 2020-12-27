@@ -1,8 +1,12 @@
 import React from "react";
 import { func, string } from "prop-types";
 
+import "./button.css";
+
 const Button = ({ content, onClick }) => (
-  <button onClick={onClick}>{content}</button>
+  <button styleName="wrapper" onClick={onClick}>
+    {content}
+  </button>
 );
 
 Button.defaultProps = {

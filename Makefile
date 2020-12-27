@@ -25,6 +25,9 @@ run:
 	API_SERVER_URL=$(API_SERVER_URL) \
 	npm start
 
+storybook:
+	npm run storybook
+
 # dev-build:
 # 	#sudo docker build -t web_app -f DevDockerfile .
 

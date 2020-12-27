@@ -45,6 +45,7 @@ module.exports = {
       },
       {
         test: /\.(css|sass|scss|less)$/,
+        exclude: /node_modules/,
         use: [
           isDev ? "style-loader" : MiniCssExtractPlugin.loader,
           {
@@ -54,9 +55,6 @@ module.exports = {
                 auto: (resourcePath) =>
                   resourcePath.indexOf("assets/stylesheets") === -1,
                 localIdentName: "[path]___[name]__[local]___[hash:base64:5]",
-                // getLocalIdent: (context, localIdentName, localName, options) => {
-                //   return "whatever_random_class_name";
-                // },
               },
               sourceMap: isDev,
             },
