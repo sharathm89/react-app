@@ -1,5 +1,6 @@
 .wrapper {
   background-color: var(--primary);
   color: var(--white);
-  cursor: pointer;
+  border: none;
+  padding: 10px;
 }

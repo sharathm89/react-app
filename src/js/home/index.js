@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import { Button } from "Atoms";
+
 import "./home.css";
 
 const Home = () => {
@@ -27,13 +29,7 @@ const Home = () => {
         ))}
       </ul>
 
-      <ul>
-        {list.map((item, index) => (
-          <li styleName="item" key={index}>
-            {item.name}
-          </li>
-        ))}
-      </ul>
+      <Button content="Click Here" />
     </div>
   );
 };
