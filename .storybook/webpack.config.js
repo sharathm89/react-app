@@ -9,6 +9,7 @@
 const custom = require('../webpack.config.js');
 
 module.exports = {
+  // stories: ['../src/components/**/*.stories.js'],
   webpackFinal: (config) => {
     return {
       ...config,
