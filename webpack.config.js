@@ -14,12 +14,13 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"),
     publicPath: "/",
-    filename: "bundle.js",
+    filename: "[name].[chunkhash].js",
   },
   devServer: {
     compress: true,
     open: true,
     host: "localhost",
+    publicPath: "/",
     port: process.env.CLIENT_PORT,
     hot: true,
     historyApiFallback: true,
@@ -55,7 +56,7 @@ module.exports = {
                 auto: (resourcePath) =>
                   resourcePath.indexOf("assets/stylesheets") === -1,
                 localIdentName: isDev
-                  ? "[path]___[name]__[local]___[hash:base64:5]"
+                  ? "[local]___[hash:base64:5]"
                   : "[hash:base64:5]",
               },
               sourceMap: isDev,
@@ -87,6 +88,7 @@ module.exports = {
       template: "./public/index.html",
       filename: "./index.html",
       favicon: "./public/favicon.ico",
+      hash: true,
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",

@@ -1,6 +1,7 @@
 module.exports = {
   presets: ["@babel/preset-env", "@babel/preset-react"],
   plugins: [
+    ["@babel/transform-runtime"],
     [
       "@dr.pogodin/babel-plugin-react-css-modules",
       {
@@ -13,7 +14,7 @@ module.exports = {
         },
         generateScopedName:
           process.env.NODE_ENV === "development"
-            ? "[path]___[name]__[local]___[hash:base64:5]"
+            ? "[local]___[hash:base64:5]"
             : "[hash:base64:5]",
       },
     ],
