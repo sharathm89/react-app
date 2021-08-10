@@ -1,7 +1,27 @@
 .wrapper {
-  /*background-color: var(--primary);
-  color: var(--white);*/
-  border: none;
-  padding: 10px;
-  background-color: green;
+  font-size: var(--base);
+  line-height: 1.33;
+  font-weight: var(--semi-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+.type1 {
+  padding: var(--space1) var(--space2_5);
+  border-radius: var(--space0_5);
+  border: solid 1.5px var(--secondary);
+  color: var(--secondary);
+  background-color: transparent;
+  font-family: var(--font-1);
+}
+
+.type2 {
+  padding: var(--space1) var(--space2_5);
+  border-radius: var(--space0_5);
+  border: var(--space0_5);
+  background-color: var(--primary);
+  color: var(--white);
+  font-family: var(--font-1);
 }
