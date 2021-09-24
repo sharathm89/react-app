@@ -1,37 +1,45 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { func, bool } from "prop-types";
+import { connect } from "react-redux";
 
-import { Button } from "Atoms";
+import { startLoading, stopLoading } from "Actions";
+// import { startLoading, stopLoading } from "../../actions";
 
 import "./home.css";
 
-const Home = () => {
-  const [list, setList] = useState([]);
-
-  useEffect(() => {
-    setList([
-      { name: "India" },
-      { name: "Sri Lanka" },
-      { name: "United States of America" },
-      { name: "Denmark" },
-      { name: "Australia" },
-    ]);
-  }, []);
-
+const Home = ({ startLoading, stopLoading, loading }) => {
+  const onBtnClick = () => {
+    if (loading) {
+      stopLoading();
+    } else {
+      startLoading();
+    }
+  };
+  console.log(loading);
   return (
     <div styleName="container">
-      <div styleName="title">Hello from Home CSS</div>
-
-      <ul styleName="country-list">
-        {list.map((item, index) => (
-          <li styleName="item" key={index}>
-            {item.name}
-          </li>
-        ))}
-      </ul>
-
-      <Button content="Click Here" />
+      <button onClick={onBtnClick}>
+        {loading ? "Stop Loading" : "Start Loading"}
+      </button>
     </div>
   );
 };
 
-export default Home;
+Home.propTypes = {
+  startLoading: func,
+  stopLoading: func,
+  loading: bool,
+};
+
+const mapStateToProps = ({ settings }) => {
+  const { loading } = settings;
+
+  return { loading };
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  startLoading: () => dispatch(startLoading()),
+  stopLoading: () => dispatch(stopLoading()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

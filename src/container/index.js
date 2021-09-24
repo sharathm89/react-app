@@ -8,7 +8,7 @@ import { LoadingIndicator } from "Atoms";
 
 import routes from "./routes";
 
-const Home = ({ loading }) => (
+const MainApp = ({ loading }) => (
   <div className="container">
     <Header />
     {loading && <LoadingIndicator />}
@@ -31,7 +31,7 @@ const Home = ({ loading }) => (
   </div>
 );
 
-Home.propTypes = {
+MainApp.propTypes = {
   loading: bool,
 };
 
@@ -41,4 +41,4 @@ const mapStateToProps = ({ settings }) => {
   return { loading };
 };
 
-export default connect(mapStateToProps, null)(Home);
+export default connect(mapStateToProps, null)(MainApp);
